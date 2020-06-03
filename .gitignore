@@ -1,1 +1,7 @@
+# Custom
+*~
+.vscode/
+.DS_Store
+
+# Rust
 /target
