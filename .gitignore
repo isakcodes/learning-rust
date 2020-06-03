@@ -6,3 +6,4 @@
 # Rust
 /target/
 /*/target/
+/*/*/target/
