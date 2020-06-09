@@ -1,0 +1,15 @@
+$ cargo run
+   Compiling variables v0.1.0 (file:///projects/variables)
+warning: variable does not need to be mutable
+  --> src/main.rs:12:9
+   |
+12 |     let mut spaces = "    ";
+   |         ----^^^^^^
+   |         |
+   |         help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` on by default
+
+    Finished dev [unoptimized + debuginfo] target(s) in 1.62s
+     Running `target/debug/variables`
+spaces is: 4
