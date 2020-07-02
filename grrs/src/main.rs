@@ -17,9 +17,14 @@ fn main() {
     let reader = BufReader::new(file);
     // let content = std::fs::read_to_string(&args.path)
     //     .expect("could not read file");
-    for line in reader.lines().map(|l| l.unwrap()) {
-        if line.find(&args.pattern).is_some() {
-            println!("{}", line);
+    for result in reader.lines() {
+        match result {
+            Ok(line) => {
+                if line.find(&args.pattern).is_some() {
+                    println!("{}", line);
+                }
+            }
+            Err(error) => { println!("Oh no, {}", error) }
         }
     }
 }
